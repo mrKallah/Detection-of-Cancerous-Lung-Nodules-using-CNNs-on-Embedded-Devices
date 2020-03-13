@@ -87,8 +87,8 @@ def plot_image(pixel_array, title):
 
     #plots the image
     plt.imshow(pixel_array, cmap=plt.cm.bone)
-    plt.xlabel('xlabel', fontsize=18)
-    plt.ylabel('ylabel', fontsize=16)
+    plt.xlabel('Height', fontsize=18)
+    plt.ylabel('Width', fontsize=16)
 
     # changes the title to strings based the integers
     if title == 0:

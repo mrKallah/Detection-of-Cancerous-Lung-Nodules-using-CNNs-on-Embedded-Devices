@@ -134,7 +134,7 @@ def preprocess_return_all(img, new_shape):
 
     # first it erodes the tozero version of the image, after which the image is thresholded with using a binary type
     # then the image is morphed using a gradient to create a hard outline of the image
-    max_morphed = cv2.erode(tozero, np.ones((2, 2), np.uint8), iterations=4)
+    max_morphed = cv2.erode(tozero, kernel, iterations=4)
     ret, max_morphed = cv2.threshold(max_morphed, threshold, np.max(max_morphed), cv2.THRESH_BINARY)
     max_morphed = cv2.morphologyEx(max_morphed, morph, kernel)
 

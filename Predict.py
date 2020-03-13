@@ -6,17 +6,19 @@ import numpy as np
 # loads the parameters saved after training the model. Ensures things like scalar and pre-processing type are the same
 from save.parameters import pre_process_type, scalar, _size, batch_size
 size = (_size, _size, 1)
-
-
 save_folder = "save"
+
+# save = 83, 87
+
+
 # loads the ZR and Keras model from file
 model = load_model('{}/m.hdf5'.format(save_folder))
 zr = x = np.load("{}/z.npy".format(save_folder), allow_pickle=True)[0] # [0] because the model is saved in an array
 
-# path = "dataset_predict/"
-path = "dataset_300/"
-
 model_name = "custom"
+
+# path = "dataset_predict/"
+path = "dataset_256/"
 
 input_size = 256
 
